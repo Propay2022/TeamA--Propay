@@ -1,0 +1,22 @@
+<div><app-transactions></app-transactions></div>
+<br>
+<table >
+    <tr>
+        <th>MOBILE NUMBER</th>
+        <th>OPERATOR</th>
+        <th>BROADBAND PLANS</th>
+    </tr>
+    <tr *ngFor = "let b of broadbandArr">
+        <td>
+            {{b.mobile_No}} 
+        </td>
+        <td>
+            {{b.operator}}
+        </td>
+        <td>
+            {{b.bbplans}}
+        </td>
+
+    </tr>
+    
+    </table>

@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <h1>Gas Booking</h1>
+    <img class="image" src="../assets/Gas.svg"/>
+    <form #myForm="ngForm" (ngSubmit)="insertLpg(myForm.value)">
+      <div class="outerbox">
+        <div class="inputbox">
+          <label>Choose a Provider: </label>
+          <select name="provider" #provider="ngModel" ngModel required [(ngModel)]="bill">
+            <option value="">Select an Provider</option>
+            <option value="bharat">Bharat Gas</option>
+            <option value="hp">HP GAS</option>
+            <option value="indane">indane Gas</option>
+          </select>
+          <br/><br/><br/>
+          <label>Enter your number: </label>
+          <input class="numtext" type="text" name="mobile_No" #mobile_No="ngModel" ngModel required pattern="[0-9]+" maxlength="10" minlength="10" />
+          <div *ngIf="mobile_No.touched">
+              <div *ngIf="mobile_No.errors?.['required']">
+                  <font color="red"><b>Mobile Number Required.</b></font>
+              </div>
+              <div *ngIf="mobile_No.errors?.['pattern']">
+                  <font color="red"><b>Invalid Mobile Number.</b></font>
+              </div>
+          </div><br><br>
+          <label>CustomerID:</label>
+          <input class="numtext"type="text" name="customer_No"  #customer_No="ngModel" ngModel required pattern="[0-9]+" maxlength="11" minlength="11" [(ngModel)]="no" />
+          <div *ngIf="customer_No.touched">
+              <div *ngIf="customer_No.errors?.['required']">
+                  <font color="red"><b>Customer Number Required.</b></font>
+              </div>
+              <div *ngIf="customer_No.errors?.['pattern']">
+                  <font color="red"><b>Invalid Customer Number.</b></font>
+              </div>
+          </div><br><br>
+         
+          <label>Amount:</label>
+          <input class="numtext" type="text" name="amount"  #amount="ngModel" ngModel required pattern="[0-9]+" maxlength="7" minlength="1" [(ngModel)]="plans"/>
+          <div *ngIf="amount.touched">
+              <div *ngIf="amount.errors?.['required']">
+                  <font color="red"><b>Amount Required.</b></font>
+              </div>
+              <div *ngIf="amount.errors?.['pattern']">
+                  <font color="red"><b>Invalid Amount.</b></font>
+              </div>
+          </div><br><br>
+          <!-- <button class="button">PayNow </button> -->
+
+          <button class="sbtn" [disabled]="myForm.invalid">PAY NOW</button><br>
+          <!-- <button class="sbtn" type="submit" routerLink="/payment" [disabled]="myForm.invalid">Proceed</button> -->
+          <!-- <font color="green"><b> {{msg}} </b></font> -->
+
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

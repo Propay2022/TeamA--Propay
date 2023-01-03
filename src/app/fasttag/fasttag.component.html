@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Electric bill payment</title>
+
+</head>
+<body>
+
+	<h1>FAST TAG RECHARGE</h1>
+    <img class=image src="../assets/fast-tag.svg"/>
+
+	<form #myForm="ngForm" (ngSubmit)="insertFasttag(myForm.value)">
+		<div class="borderbox">
+            
+			<div class="innerbox">
+				<div class="bill">
+				<label>SELECT FASTTAG PROVIDER:</label> 
+				<select class="elec-option" name="biller" #biller="ngModel" ngModel required [(ngModel)]="bill">
+                    <option value="">SELECT </option>
+					<option value="SBI">SBI FASTTAG</option>
+					<option value="HDFC">HDFC FASTTAG</option>
+					<option value="IDFC">IDFC FASTTAG</option>
+					<option value="INDIAN BANK">INDIAN BANK FASTTAG</option>
+					<option value="KOTAKMAHINDRA">KOTAK MAHINDRA FASTTAG</option>
+					<option value="INDUS">INDUS FASTTAG</option>
+					<option value="AIRTEL">AIRTEL FASTTAG</option>
+					<option value="PTM">PAYTM FASTTAG</option>
+					<option value="EQU">EQUATUS FASTTAG</option>
+				</select> </div><br> <br> 
+				<div class="customer">
+				<label>VEHICLE NUMBER:</label>
+				 	<input class="cnum" type="text" placeholder="Vehicle number" style="text-transform:uppercase" name="number" #number="ngModel" ngModel required pattern="(([A-Za-z]){2,3}(?:[0-9]){1,2}(?:[A-Za-z]){1,2}([0-9]){1,4})|(([A-Za-z]){2,3}([0-9]){1,4})" maxlength="10" minlength="9" [(ngModel)]="no"/>
+				 	<div *ngIf="number.touched">
+						<div *ngIf="number.errors?.['required']">
+							<font color="red"><b>Register Number Required.</b></font>
+						</div>
+						<div *ngIf="number.errors?.['pattern']">
+							<font color="red"><b>Invalid Register Number.</b></font>
+						</div>
+				 	</div>
+				</div>
+				<br> <br> 
+				<div Class="amount">
+				<label>Amount:</label> 
+					<input class="camo" type="text" placeholder="Amount" name="amount" #amount="ngModel" ngModel required="[0-9]+" minlength="0" maxlength="7" [(ngModel)]="plans"/>
+					<div *ngIf="amount.touched">
+                        <div *ngIf="amount.errors?.['required']">
+                            <font color="red"><b>Amount Required.</b></font>
+                        </div>
+                        <div *ngIf="amount.errors?.['pattern']">
+                            <font color="red"><b>Invalid Amount.</b></font>
+                        </div>
+					</div> <br> <br>
+				<button  class="button" id="button1" [disabled]="myForm.invalid">Recharge Now</button>
+			</div>
+			</div>
+		</div>
+	</form>
+	
+</body>
+</html>
+

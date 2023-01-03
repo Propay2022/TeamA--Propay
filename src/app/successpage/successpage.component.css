@@ -1,0 +1,147 @@
+body{ 
+    background-color: #01011ad7; 
+    height: 100vh; 
+} 
+#card { 
+
+    top: 50px; 
+    position: relative; 
+    width: 320px; 
+    display: block; 
+    margin: 40px auto; 
+    text-align: center; 
+    font-family: 'Source Sans Pro', sans-serif; 
+} 
+
+h3 { 
+    position: relative; 
+    color: #030108; 
+    font-family: 'Times New Roman', Times, serif; 
+
+} 
+
+#upper-side { 
+    padding: 3em; 
+    background-color: #621866; 
+    display: block; 
+    color: rgb(18, 58, 68); 
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px; 
+} 
+
+
+
+#status { 
+    padding: 2em; 
+    font-weight: lighter; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: 1em; 
+    margin-top: -.2em; 
+    margin-bottom: 0; 
+} 
+
+#lower-side { 
+    padding: 2em 2em 5em 2em; 
+    background: rgb(7, 7, 7); 
+    display: block; 
+    border-bottom-right-radius: 8px; 
+    border-bottom-left-radius: 8px; 
+} 
+
+#message { 
+    margin-top: -.5em; 
+    color: #f7f1f1; 
+    font-family: 'Times New Roman', Times, serif; 
+    letter-spacing: 1px; 
+} 
+
+#contBtn { 
+    position: relative; 
+    top: 1.5em; 
+    text-decoration: none; 
+    background: rgb(216, 229, 232); 
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: large; 
+    color: rgb(16, 10, 10); 
+    margin: auto; 
+    padding: .8em 3em; 
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21); 
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21); 
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21); 
+    border-radius: 25px; 
+    -webkit-transition: all .4s ease; 
+    -moz-transition: all .4s ease; 
+    -o-transition: all .4s ease; 
+    transition: all .4s ease; 
+
+} 
+#contBtn:hover { 
+    background-color: #eaeae5; 
+    color: #000; 
+    box-shadow: 0 0 5px #621866, 
+        0 0 20px rgba(203, 3, 253, 0.8), 
+        0 0 35px rgba(224, 2, 253, 0.7); 
+    border-color: rgb(232, 231, 231); 
+} 
+
+.checkmark__circle { 
+    padding: 2em; 
+    position: center; 
+    stroke-dasharray: 166; 
+    stroke-dashoffset: 166; 
+    stroke-width: 2; 
+    stroke-miterlimit: 10; 
+    stroke: #d8e0d8; 
+    fill: none; 
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards; 
+} 
+
+.checkmark { 
+    padding: 2em; 
+    width: 56px; 
+    height: 56px; 
+    border-radius: 50%; 
+    display: block; 
+    stroke-width: 5; 
+    stroke:rgb(251, 255, 251); 
+    stroke-miterlimit: 15; 
+    margin-left: 25px; 
+    box-shadow: inset 0px 0px 0px #fafcf8; 
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both; 
+} 
+
+
+.checkmark__check { 
+    position: center; 
+    transform-origin: 50% 50%; 
+    stroke-dasharray: 48; 
+    stroke-dashoffset: 48; 
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards; 
+} 
+
+@keyframes stroke { 
+    100% { 
+        stroke-dashoffset: 0; 
+    } 
+} 
+
+@keyframes scale { 
+
+    0%, 
+    100% { 
+        transform: none; 
+    } 
+    50% { 
+        transform: scale3d(1.1, 1.1, 1); 
+    } 
+} 
+
+@keyframes fill { 
+    100% { 
+        box-shadow: inset 0px 0px 0px 30px #faf9fc; 
+    } 
+    name{
+        top:50px;
+    }
+} 

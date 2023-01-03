@@ -1,0 +1,103 @@
+h1{
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    /* right: 520px; */
+    color: #fff;
+    border: 4px solid #350338;
+    border-radius: 10px;
+    font-style: oblique;
+    text-align: center;
+}
+label{
+    color: #fff;
+}
+body {
+  background-color: #7625c7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+img{
+    /* top: 30px; */
+        border-radius: 50%;
+    padding: 10px;
+    height: 120px;
+    width: 120px;
+}
+table {
+  position: relative;
+  width: 300px;
+}
+th,td {
+  background-color: #470549;
+  border-collapse: collapse;
+  width: 65px;
+  height: 70px;
+  border-radius: 10px;
+  margin-left: 460px;
+ 
+  text-shadow: #0C0B13;
+}
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+}
+.outerbox {
+  width: 450px;
+  /* top: -60px; */
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input[type="text"]{
+ border-radius: 8px;
+ padding: 5px;
+}
+.verify{
+  background-color: #460849;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;  
+  color: white;
+
+}
+button:hover {
+    color: black;
+    background-color: white;    
+    border-radius: 10px;    
+    cursor: pointer;  
+    text-align: center;  
+}
+
+.menu{
+  /* padding-bottom: 50px; */
+  margin-left: 1150px;
+  margin-top: 25px;
+}
+.menu img{
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+}
+.dropdwn a{
+  text-decoration: none;
+  color: black;
+}

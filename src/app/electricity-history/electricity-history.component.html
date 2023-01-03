@@ -1,0 +1,22 @@
+<div><app-transactions></app-transactions></div>
+<br>
+
+<table >
+    <tr>
+        <th>ELECTRICITY BILLER</th>
+        <th>CUSTOMER NO</th>
+        <th>AMOUNT</th>
+    </tr>
+    <tr *ngFor = "let e of elecArr">
+        <td>
+            {{e.biller}} 
+        </td>
+        <td>
+            {{e.customer_No}}
+        </td>
+        <td>
+            {{e.amount}}
+        </td>
+    </tr>
+    
+    </table>

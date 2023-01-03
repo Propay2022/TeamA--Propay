@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="signup-box">
+        <div class="left-login">
+            <img src="assets\secure-payment.png">
+            <p>Simple and Secure way for all transactions. Use ProPay to pay your bills like a Pro!</p>
+        </div>
+
+        <div class="right-login">
+            <h1>Sign Up</h1>
+            <form #myForm="ngForm" (ngSubmit)="register(myForm.value)">
+            <label>User Id</label><input type="text" name="user_Id" #user_Id="ngModel" ngModel/>
+            <label>Name</label> <input type="text" name="name" #name="ngModel" ngModel required pattern="[a-zA-z][a-zA-Z]+" />
+            <div *ngIf="name.touched">
+                <div *ngIf="name.errors?.['required']">
+                    <font color="red"><b>Name Required.</b></font>
+                </div>
+                <div *ngIf="name.errors?.['pattern']">
+                    <font color="red"><b>Invalid Name</b></font>
+                </div>
+            </div>
+
+            <label>Mobile Number</label> <input type="text" name="mobile_No" #mobile_No="ngModel" ngModel required pattern="[0-9]+" maxlength="10" minlength="10" />
+            <div *ngIf="mobile_No.touched">
+                <div *ngIf="mobile_No.errors?.['required']">
+                    <font color="red"><b>Mobile Number Required.</b></font>
+                </div>
+                <div *ngIf="mobile_No.errors?.['pattern']">
+                    <font color="red"><b>Invalid Mobile Number.</b></font>
+                </div>
+            </div>
+
+            <label>Email</label><input type="text" name="email" #email="ngModel" ngModel required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" /> 
+            <div *ngIf="email.touched">
+                <div *ngIf="email.errors?.['required']">
+                <font color="red"><b>Email Required.</b></font>
+                </div>
+                <div *ngIf="email.errors?.['pattern']">
+                <font color="red"><b>Invalid Email.</b></font>
+                </div>
+            </div>
+            
+            <label>Password</label> <input type="text" name="password" #password="ngModel" ngModel required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}"/> 
+            <div *ngIf="password.touched">
+                <div *ngIf="password.errors?.['required']">
+                    <font color="red"><b>Password Required.</b></font>
+                </div>
+                <div *ngIf="password.errors?.['pattern']">
+                    <font color="red"><b>Invalid Password.</b></font>
+                </div>
+            </div><br>
+            <label>Confirm Password</label> <input type="text" name="confirm_Pass" #confirm_Pass="ngModel" ngModel required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}"/> 
+            <div *ngIf="confirm_Pass.touched">
+                <div *ngIf="confirm_Pass.errors?.['required']">
+                    <font color="red"><b>Password Required.</b></font>
+                </div>
+                <div *ngIf="confirm_Pass.errors?.['pattern']">
+                    <font color="red"><b>Enter the Password.</b></font>
+                </div>
+            </div><br>
+            <button class="button" [disabled]="myForm.invalid">Sign-up</button>
+            <br>
+            <font color="green"><b> {{msg}} </b></font>
+        </form>
+        <p class="line1">
+            By clicking the sign up button, you agree to our <br> 
+            <a href="#"> Terms and Condition</a> and <a href="#">Privacy Policies</a>
+            <p class="line2">Already have an account? <a routerLink="/login">Login here</a></p>
+
+        </div>
+    </div>
+</body>
+</html>

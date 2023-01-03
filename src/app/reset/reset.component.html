@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Reset Window</title>
+</head>
+
+<body>
+	<div class="reset-box">
+        <div class="left-login">
+            <img src="assets\secure-payment.png">
+            <p>Simple and Secure way for all transactions. Use ProPay to pay your bills like a Pro!</p>
+        </div>
+        <div class="right-login">
+		<h1>Reset Password</h1>
+
+		<form #myForm="ngForm" (ngSubmit)="reset(myForm.value)">
+			<label> Email</label> <input type="text"  name="email" #email="ngModel" ngModel/> 
+			<label>New Password</label> <input type="text" name="password" #password="ngModel" ngModel/>
+			<label>Re-Enter Password</label> <input type="text" name="confirm_Pass" #confirm_Pass="ngModel" ngModel/>
+			<button class="button">Reset</button>
+			<br>
+			<font color="green"><b> {{msg}} </b></font>
+			<br>
+			<p class="line3">Don't have an account? <a routerLink="/signup">Sign Up Here</a></p>
+		</form>
+	</div>
+    </div>
+
+</body>
+</html>

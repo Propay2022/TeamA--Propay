@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mobile Recharge</h1>
+    <img class="image"src="../assets/mobile.svg"/>
+    <form #myForm="ngForm" (ngSubmit)="proceed()">
+    <div class="outerbox">
+        <div class="inputbox">
+        <label>
+            MOBILE NUMBER :
+     </label>
+     <input class="numtext" type="text"  placeholder="Enter Your MobileNo" name="mobile_No" #mobile_No="ngModel" ngModel required pattern="[0-9]+" maxlength="10" minlength="10" [(ngModel)] ="mob" />
+     <div *ngIf="mobile_No.touched">
+         <div *ngIf="mobile_No.errors?.['required']">
+             <font color="red"><b>Mobile Number Required.</b></font>
+         </div>
+         <div *ngIf="mobile_No.errors?.['pattern']">
+             <font color="red"><b>Invalid Mobile Number.</b></font>
+         </div>
+     </div><br><br>
+
+     
+      <label>Choose your operator :</label>
+      <select name="operator" #operator="ngModel" ngModel required [(ngModel)]="ope">
+        <option value="">Select an operator</option>
+        <option value="Airtel">Airtel</option>
+        <option value="VI">VI</option>
+        <option value="bsnl">BSNL</option>
+        <option value="jio">JIO</option>
+      </select><br><br>
+      <label>
+        <button type="submit" [disabled]="myForm.invalid" class="sbtn"> VIEW PLANS </button>
+    </label>  
+</div>
+    </div>
+</form>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+
+<html>
+    
+<body>
+  <main class="container">
+    <div class="main">
+
+      <!-- Payment Method Section  -->
+      <section class="payment_method">
+        <h2 class="ship_head">Payment Method</h2>
+        <div class="card_info">
+          <div class="card_head">
+            <h2 class="card_title1">Debit or Credit Card</h2>
+          </div>
+          <div class="card_types">
+            <img class="card_img" src="https://cdn-icons-png.flaticon.com/512/349/349221.png" alt="" />
+            <img class="card_img" src="../assets/rupay.png" alt="" />
+            <img class="card_img" src="../assets/mastercard.png" alt="" />
+            <img class="card_img1" src="../assets/upi.png" alt="" />
+            
+          </div>
+          <form action="">
+            <input type="text" name="Name" value="" placeholder="Card Holder" maxlength="60" />
+            <input type="text" name="Number" value="" placeholder="Card Number" maxlength="16" />
+            <div>
+              <input type="text" name="Name" value="" placeholder="Expire" maxlength="4" />
+              <input type="text" name="Name" value="" placeholder="CVV" maxlength="3" />
+            </div>
+          </form>
+          <span class="save_card">Save Card</span>
+        </div>
+        <div class="e_payment">
+          <div class="pay1">
+            <img src="https://cdn-icons-png.flaticon.com/512/6124/6124998.png" alt="" />
+          </div>
+          <div class="pay2">
+            <img src="https://cdn-icons-png.flaticon.com/512/5977/5977576.png" alt="" />
+          </div>
+          <div class="pay3">
+            <img src="../assets/phonepe.png" alt="" />
+          </div>
+        </div>
+        <!-- <button class="confirm_btn">Confirm</button> -->
+      </section>
+      <!-- Order Summary Section  -->
+      <section class="order_summary">
+       
+        <img class="qr_code" src="../assets/Qrcode.png" alt="" />
+        <p class="condition">
+              Pay and Confirm Order by QR Code Using <b>Mobile Application</b>
+        </p>
+         <font color="white"><b class="pay">TOTAL AMOUNT: {{plans}}</b></font>
+        <button (click)="success()" class="review_btn">Review and Confirm</button>   
+      </section>
+      
+    </div>
+  </main>
+
+</body>
+
+</html>

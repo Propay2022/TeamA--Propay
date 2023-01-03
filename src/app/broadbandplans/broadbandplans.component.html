@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 class="heading">BroadbandPlans</h1>
+   
+    <div class="flex-container">
+        <form #myForm="ngForm" (ngSubmit) = "insertBroadband(myForm.value)">
+        <details>
+            <summary>&#x20b9;499 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=499 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 40mbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary>&#x20b9;699 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=699 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 100mbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary>&#x20b9;799 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=799 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 150mbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary>&#x20b9;999 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=999 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 200mbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary>&#x20b9;1499 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=1499 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 300mbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary>&#x20b9;2499 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=2499 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 500mbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary>&#x20b9;3999 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=3999 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 1Gbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary>&#x20b9;4499 Pack</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=4499 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Data</u>: Unlimited Data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <u>Speed</u>: 1Gbps &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>Validity</u>: 30 days</p>  
+            </div>
+        </label>
+        </details>
+        <div class="btn-border">
+        <button class="btn" type="submit" [disabled]="myForm.invalid">Proceed</button>
+    </div>
+    {{msg}}
+    </form>
+</div>
+
+</body>
+</html>

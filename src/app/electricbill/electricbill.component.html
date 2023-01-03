@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Electric bill payment</title>
+
+</head>
+<body>
+
+    <h1>ELECTRICITY BILL PAYMENT</h1>
+    <img class=image src="../assets/Electrician-amico.svg"/>
+
+    <form #myForm="ngForm" (ngSubmit)="insertElectricity(myForm.value)">
+        <div class="borderbox">
+            
+            <div class="innerbox">
+                <div class="bill">
+                <label>Choose the biller:</label> 
+                <select class="elec-option" name="biller" #biller="ngModel" ngModel [(ngModel)]="bill">
+                    <option value="">select an biller</option>
+                    <option value="TNEB">Tamil Nadu Electricity Board(TNEB)</option>
+                    <option value="Adani ltd">Adani Electric Mumbai Limited</option>
+                    <option value="Assam ltd">Assam Power Distribution Company Ltd</option>
+                    <option value="BESL Ltd">BESL Bharate Electric Service Ltd</option>
+                    <option value="BEST MI">BEST Mumbai</option>
+                    <option value="Bhagalpur Ltd">Bhagalpur Electricity</option>
+                    <option value="CESC Ltd">CESC Limited</option>
+                    <option value="APCPDCL">Central power Distribution Company Ltd of Andra Pradesh(APCPDCL)</option>
+                    <option value="DHBVN eb">Dakshin Hariyana Bijli Vitran Nigam(DHBVN)</option>
+                    <option value="Nagaland">Department of Nagaland</option>
+                    <option value="Arunachal Pradesh">Department of Power,Government of Arunachal Pradesh</option>
+                    <option value="Chandigarh">Electric Department of Chandigarh</option>
+                    <option value="Goa">Goa Electricity Department</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh State Electricity Board</option>
+                    <option value="India Power">India Power Corporation Limited(IPCL)</option>
+                    <option value="KSEBL">Kerala State Electric Board Ltd</option>
+                    <option value="Mangalore Ltd">Mangalore Electricity Supply Company Ltd(RAPDRP Towns)</option>
+                    <option value="NDMC">New Delhi Municipal council</option>
+                    <option value="PSPCL">Punjab State Power Corporation Ltd</option>
+                    <option value="Tata power">Tata Power-DDL</option>
+                </select> </div><br> <br> 
+                <div class="customer">
+                <label>Customer number:</label>
+                <input  class="cnum" type="text" placeholder="Customer number" name="customer_No" #customer_No="ngModel" ngModel required pattern="[0-9]+" maxlength="12" minlength="12" [(ngModel)]="no"/>
+                <div *ngIf="customer_No.touched">
+                    <div *ngIf="customer_No.errors?.['required']">
+                        <font color="red"><b>Customer Number Required.</b></font>
+                    </div>
+                    <div *ngIf="customer_No.errors?.['pattern']">
+                        <font color="red"><b>Invalid Customer Number.</b></font>
+                    </div>
+                </div>
+                
+                </div>
+                <br> <br> 
+                <div Class="amount"><label>Bill Amount:</label> 
+                    <input class="camo" type="text" placeholder="Amount"  name="amount" #amount="ngModel" ngModel required pattern="[0-9]+" maxlength="7" minlength="0" [(ngModel)]="plans"/>
+                    <div *ngIf="amount.touched">
+                        <div *ngIf="amount.errors?.['required']">
+                            <font color="red"><b>Amount Required.</b></font>
+                        </div>
+                        <div *ngIf="amount.errors?.['pattern']">
+                            <font color="red"><b>Invalid Amount.</b></font>
+                        </div>
+                    </div><br><br>
+                    <button class="button" [disabled]="myForm.invalid">PayNow </button>
+                <!-- <button class="button" (click)="proceed()" [disabled]="myForm.invalid" >PayNow</button> -->
+            </div>
+                <br>
+                <!-- <font color="green"><b> {{msg}} </b></font> -->
+
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>

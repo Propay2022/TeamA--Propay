@@ -1,0 +1,59 @@
+
+<div id="contentToConvert">
+    <div class="company_address">
+        <h2>MOBILE RECHARGE</h2>
+       
+    </div>
+    <div class="customer_container">
+        <div class="in_details">
+            <h1 class="in_head">INVOICE</h1>
+            <table>
+                <tr>
+                    <td>Invoice No</td>
+                    <td>:</td>
+                    <td><b>#000001</b></td>
+                </tr>
+                <tr>
+                    <td>Due Date</td>
+                    <td>:</td>
+                    <td><b>30 Nov 2022</b></td>
+                </tr>
+                <tr>
+                    <td>Bill No</td>
+                    <td>:</td>
+                    <td><b>02500</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="product_container">
+        <table class="item_table" border="1" cellspacing="0">
+            <tr>
+                <th>Sl. No.</th>
+                <th>Operator</th>
+                <th>Customer ID</th>
+                <th>Bill Amount</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>{{operator}}</td>
+                <td>{{mobile}}</td>
+                <td>{{plan}}</td>
+                
+            </tr>
+        </table>
+    </div>
+    <div class="invoice_footer">
+        <div class="note">
+            <h2>Thank You!</h2>
+            <div>
+                <input type="button" value="download pdf" (click)="captureScreen()"/>
+            </div>
+              
+            
+        </div>
+       
+    </div>
+</div>
+       
+

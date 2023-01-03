@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    
+    <h1 class=heading>DTH Plans</h1>
+   
+    <div class="flex-container">
+        <form #myForm="ngForm" (ngSubmit) = "insertDth(myForm.value)">
+        <details>
+            <summary> <h3> &#x20b9;235 </h3>&nbsp;&nbsp;&nbsp; All in one English Hd combo</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=499 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                   All in one English Hd combo
+                        14 SD | 25HD Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary> <h3> &#x20b9;220 </h3>&nbsp;&nbsp;&nbsp; Celebration Combo</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=220 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                   Celebration Hd combo 23 SD
+                        |14 HD Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary> <h3> &#x20b9;215 </h3>&nbsp;&nbsp;&nbsp; SPORTS  Combo</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=215 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                    SPORTS Hd combo 63 pay Channels
+                        | 10HD Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary> <h3> &#x20b9;240 </h3>&nbsp;&nbsp;&nbsp; South Grand Chennals</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=240 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                   South Grands67  pay Chennals
+                        67 SD | 25HD Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary> <h3> &#x20b9;175 </h3>&nbsp;&nbsp;&nbsp; Tamil pay Channels</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=175 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                  Tamil Retention Pack39 pay Chennels
+                        39 SD  Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary> <h3> &#x20b9;205 </h3>&nbsp;&nbsp;&nbsp; Value HD Tamil Channels</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=205 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                   Value HD Tamil 63 pay Channels
+                         12SD | 51HD Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary> <h3> &#x20b9;230 </h3>&nbsp;&nbsp;&nbsp; Value HD Hindi Chennals</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=230 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                   Value HD Hindi65 pay Chennels
+                        12 HD | 53SD Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <details>
+            <summary> <h3> &#x20b9;350 </h3>&nbsp;&nbsp;&nbsp; MUSIC101 pay Channels</summary>
+        <label class = "label-expand">
+            <input type="radio" name=bbplans value=350 #bbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                   MUSIC101 pay Channels
+                        67SD Channels
+                    </p>
+            </div>
+        </label>
+        </details>
+        <div class="btn-border">
+            <button class="btn" type="submit" [disabled]="myForm.invalid">Proceed</button>
+        </div>
+        
+
+       
+    </form>
+      
+    </div>
+
+    </body>
+</html>
+
+
+
+
+

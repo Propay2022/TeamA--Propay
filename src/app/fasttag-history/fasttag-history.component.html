@@ -1,0 +1,22 @@
+<div><app-transactions></app-transactions></div>
+<br>
+
+<table >
+    <tr>
+        <th>FASTTAG BILLER</th>
+        <th>VEHICLE NUMBER</th>
+        <th>AMOUNT</th>
+    </tr>
+    <tr *ngFor = "let f of fasttagArr">
+        <td>
+            {{f.biller}} 
+        </td>
+        <td>
+            {{f.number}}
+        </td>
+        <td>
+            {{f.amount}}
+        </td>
+    </tr>
+    
+    </table>

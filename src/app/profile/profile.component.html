@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="menu">
+    <!-- <h1>
+      MY ACCOUNT
+    </h1> -->
+    <button class="accnt" mat-button [matMenuTriggerFor]="beforeMenu"><img src="assets\menu.png"></button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button class="dropdwn" mat-menu-item [disabled]="myForm.invalid" (click)="deleteUser(myForm.value.id)">DELETE ACCOUNT</button>
+    <button class="dropdwn" mat-menu-item (click)="reset()">CHANGE PASSWORD</button>
+    </mat-menu>
+</div>
+    <!-- <img src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?w=740&t=st=1669794695~exp=1669795295~hmac=ee93b3f735ac480fcafaaa5ecd6daf057f6e8a8c12ac0b4eaabade56f81d21b6"/> -->
+    <!-- <h1>PROFILE</h1> -->
+    <form #myForm="ngForm" (ngSubmit) ="findUser(myForm.value.id)" >
+    <br>
+    <br>
+    <div class="outerbox">
+
+        <label>ENTER USER ID TO VERIFY YOUR IDENTITY</label>
+        <br><input type="text" name="id" #id="ngModel" ngModel required/> <br/>
+        <button class="verify"><b>VERIFY</b></button>
+            <br>
+            <!-- <img class="bg" src="https://img.freepik.com/free-photo/hand-holding-writing-checklist-application-form-document-clipboard-white-background-3d-illustration_56104-1551.jpg?w=740&t=st=1669795187~exp=1669795787~hmac=48cb0f3ae430c2af03fc66d4dc088026d1b0232875e205249d753c4d87a8d20e"/>  -->
+      <table>
+        <tr>
+          <th>USER ID:</th>
+          <td>{{user.user_Id}}</td>
+        </tr>
+        <tr>
+          <th>NAME:</th>
+          <td>{{user.name}}</td>
+        </tr>
+        <tr>
+          <th>MOBILE NUMBER:</th>
+          <td>{{user.mobile_No}}</td>
+        </tr>
+        <tr>
+          <th>EMAIL ID:</th>
+          <td>{{user.email}}</td>
+        </tr>
+      </table>
+      <!-- <button (click)="deleteUser(myForm.value.id)"> DELETE ACCOUNT</button> -->
+    </div>
+    
+  </form>
+</body>
+</html>
+
+

@@ -1,0 +1,22 @@
+<div><app-transactions></app-transactions></div>
+<br>
+
+<table >
+    <tr>
+        <th>CREDITCARD BILLER</th>
+        <th>CREDITCARD NUMBER</th>
+        <th>AMOUNT</th>
+    </tr>
+    <tr *ngFor = "let c of creditArr">
+        <td>
+            {{c.biller}} 
+        </td>
+        <td>
+            {{c.number}}
+        </td>
+        <td>
+            {{c.amount}}
+        </td>
+    </tr>
+    
+    </table>

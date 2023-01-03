@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <h1>PLANS</h1>
+      <div class="flex-container">
+
+        <form #myForm="ngForm" (ngSubmit) = "insertMobile(myForm.value)">
+          
+          <!-- .................................................... -->
+          <details>
+            <summary> <h3> &#x20b9; </h3>&nbsp;&nbsp;&nbsp; DATA</summary>
+        <label class = "label-expand">
+            <input type="radio" name=mbplans value=148 #mbplans="ngModel" ngModel required />
+            <div class = "contents">
+                    <p>
+                      Rs.148 -------
+                      DATA : 15GB  -------
+                      VALIDITY: TILL YOUR EXISTING PACK
+                    </p>
+            </div>
+        </label>
+        <label class = "label-expand">
+          <input type="radio" name=mbplans value=118 #mbplans="ngModel" ngModel required />
+          <div class = "contents">
+                  <p>
+                    Rs.118 -------
+                    DATA : 12GB  -------
+                    VALIDITY: TILL YOUR EXISTING PACK
+                  </p>
+          </div>
+      </label>
+      <label class = "label-expand">
+        <input type="radio" name=mbplans value=181 #mbplans="ngModel" ngModel required />
+        <div class = "contents">
+                <p>
+                  Rs.181 -------
+                  DATA : 1GB/DAY  -------
+                  VALIDITY: 30 DAYS 
+                </p>
+        </div>
+    </label>
+    <label class = "label-expand">
+      <input type="radio" name=mbplans value=19 #mbplans="ngModel" ngModel required />
+      <div class = "contents">
+              <p>
+                Rs.19 -------
+                DATA : 1GB  -------
+                VALIDITY: 1 DAY
+              </p>
+      </div>
+  </label>
+  <label class = "label-expand">
+    <input type="radio" name=mbplans value=58 #mbplans="ngModel" ngModel required />
+    <div class = "contents">
+            <p>
+              Rs.58 -------
+              DATA : 3GB  -------
+              VALIDITY: N/A
+            </p>
+    </div>
+</label>
+        </details>
+        <!-- ...................................................... -->
+        <details>
+          <summary> <h3> &#x20b9; </h3>&nbsp;&nbsp;&nbsp; TRULY UNLIMITED</summary>
+      <label class = "label-expand">
+          <input type="radio" name=mbplans value=899 #mbplans="ngModel" ngModel required />
+          <div class = "contents">
+                  <p>
+                    Rs.899 -------
+                UNLIMITED CALLS ------- 2GB/DAY ------- 100SMS/DAY ------- 
+                 VALIDITY: 84 DAYS
+                  </p>
+          </div>
+      </label>
+      <label class = "label-expand">
+        <input type="radio" name=mbplans value=779 #mbplans="ngModel" ngModel required />
+        <div class = "contents">
+                <p>
+                  Rs.779 -------
+                TRULY UNLIMITED LOCAL CALLS ------- 2GB/DAY ------- 100SMS/DAY ------- 
+                 VALIDITY: 84 DAYS
+                </p>
+        </div>
+    </label>
+    <label class = "label-expand">
+      <input type="radio" name=mbplans value=699 #mbplans="ngModel" ngModel required />
+      <div class = "contents">
+              <p>
+                Rs.699 -------
+                UNLIMITED CALLS ------- 3GB/DAY ------- 100SMS/DAY ------- 
+                 VALIDITY: 84 DAYS
+              </p>
+      </div>
+  </label>
+  <label class = "label-expand">
+    <input type="radio" name=mbplans value=599 #mbplans="ngModel" ngModel required />
+    <div class = "contents">
+            <p>
+              Rs.599 ----
+              UNLIMITED LOACAL STD CALLS ----- 3GB/DAY ----- 100SMS/DAY ------
+               VALIDITY: 77 DAYS
+            </p>
+    </div>
+</label>
+<label class = "label-expand">
+  <input type="radio" name=mbplans value=499 #mbplans="ngModel" ngModel required />
+  <div class = "contents">
+          <p>
+            Rs.499 ----
+                            UNLIMITED LOCAL, STD CALLS ----- 1.5GB/DAY ----- 100SMS/DAY ----- 
+                             VALIDITY: 56 DAYS
+          </p>
+  </div>
+</label>
+
+      </details>
+      <!-- ....................................... -->
+      <details>
+        <summary> <h3> &#x20b9; </h3>&nbsp;&nbsp;&nbsp; TALKTIME</summary>
+    <label class = "label-expand">
+        <input type="radio" name=mbplans value=5000 #mbplans="ngModel" ngModel required />
+        <div class = "contents">
+                <p>
+                  Rs.5000 -------
+                TALKTIME : 4237.29
+                </p>
+        </div>
+    </label>
+    <label class = "label-expand">
+      <input type="radio" name=mbplans value=1000 #mbplans="ngModel" ngModel required />
+      <div class = "contents">
+              <p>
+                Rs.1000 -------
+                TALKTIME : 847.29
+              </p>
+      </div>
+  </label>
+  <label class = "label-expand">
+    <input type="radio" name=mbplans value=500 #mbplans="ngModel" ngModel required />
+    <div class = "contents">
+            <p>
+              Rs.500 -------
+              TALKTIME : 423.73
+            </p>
+    </div>
+</label>
+<label class = "label-expand">
+  <input type="radio" name=mbplans value=100 #mbplans="ngModel" ngModel required />
+  <div class = "contents">
+          <p>
+            Rs.100 -------
+            TALKTIME : 81.29
+          </p>
+  </div>
+</label>
+<label class = "label-expand">
+<input type="radio" name=mbplans value=10 #mbplans="ngModel" ngModel required />
+<div class = "contents">
+        <p>
+          Rs.10 -------
+                            TALKTIME : 7.29
+        </p>
+</div>
+</label>
+
+    </details>
+    <!-- .................................................................... -->
+    <details>
+      <summary> <h3> &#x20b9; </h3>&nbsp;&nbsp;&nbsp; INTERNATIONAL ROAMING</summary>
+  <label class = "label-expand">
+      <input type="radio" name=mbplans value=1199 #mbplans="ngModel" ngModel required />
+      <div class = "contents">
+              <p>
+                Rs.1199 -------
+                DETAILS: 1GB,100MINS OF INCOMING/OUTGOING (INDIA+LOCAL)CALLS.
+                COVERED COUNTRIES: UAE SAUDI ARABIA MALAYSIA USA OMAN
+                QATAR UK KUWAIT SINGAPORE & MORE.
+            VALIDITY: 30 DAY
+              </p>
+      </div>
+  </label>
+  <label class = "label-expand">
+    <input type="radio" name=mbplans value=3999 #mbplans="ngModel" ngModel required />
+    <div class = "contents">
+            <p>
+              Rs.3999 -------
+              DETAILS: 5GB,500MINS OF INCOMING/OUTGOING (INDIA+LOCAL)CALLS.
+              COVERED COUNTRIES: UAE SAUDI ARABIA MALAYSIA USA OMAN
+              QATAR UK KUWAIT SINGAPORE & MORE.
+          VALIDITY: 30 DAY
+            </p>
+    </div>
+</label>
+<label class = "label-expand">
+  <input type="radio" name=mbplans value=3998 #mbplans="ngModel" ngModel required />
+  <div class = "contents">
+          <p>
+            Rs.3998 -------
+            DETAILS: 500MINS OF INCOMING/OUTGOING (INDIA+LOCAL)CALLS.
+            COVERED COUNTRIES: UAE SAUDI ARABIA MALAYSIA USA OMAN
+            QATAR UK KUWAIT IRAN RUSSIA SINGAPORE & MORE.
+        VALIDITY: 30 DAYS
+          </p>
+  </div>
+</label>
+<label class = "label-expand">
+<input type="radio" name=mbplans value=6699 #mbplans="ngModel" ngModel required />
+<div class = "contents">
+        <p>
+          Rs.6699 -------
+                        DETAILS: 500MINS OF INCOMING/OUTGOING (INDIA+LOCAL)CALLS.
+                        COVERED COUNTRIES: MALDIVES NIGERIA SOUTH AFRICA KENYA UGANDA ZAMBIA & MORE.
+                    VALIDITY: 30 DAYS
+        </p>
+</div>
+</label>
+<label class = "label-expand">
+<input type="radio" name=mbplans value=755 #mbplans="ngModel" ngModel required />
+<div class = "contents">
+      <p>
+        Rs.755 -----
+                            DETAILS: 1GB DAT VALID FOR 5 DAYS.
+                            COVERED COUNTRIES: UAE SAUDI ARABIA MALAYSIA USA OMAN
+                            QATAR UK KUWAIT SINGAPORE & MORE.
+                        VALIDITY: 7 DAYS
+      </p>
+</div>
+</label>
+
+  </details>
+  <div class="btn-border">
+    <button class="btn" type="submit" [disabled]="myForm.invalid">Proceed</button>
+</div>
+        </form>
+
+      </div>
+  </body>
+</html>

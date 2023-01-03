@@ -1,0 +1,55 @@
+<div><app-transactions></app-transactions></div>
+<br>
+
+<table >
+    <tr>
+        <th>FIRST NAME</th>
+        <th>SECOND NAME</th>
+        <th>ADDRESS</th>
+        <th>EMAIL</th>
+        <th>AGE</th>
+        <th>DOB</th>
+        <th>BLOOD GROUP</th>
+        <th>MOBILE NO</th>
+        <th>OCCUPATION</th>
+        <th>AADHAR</th>
+        <th>PAN</th>
+    </tr>
+    <tr *ngFor = "let i of insuranceArr">
+        <td>
+            {{i.fname}} 
+        </td>
+        <td>
+            {{i.sname}}
+        </td>
+        <td>
+            {{i.address}}
+        </td>
+        <td>
+            {{i.email}}
+        </td>
+        <td>
+            {{i.age}}
+        </td>
+        <td>
+            {{i.dob}}
+        </td>
+        <td>
+            {{i.bg}}
+        </td>
+        <td>
+            {{i.mobile_No}}
+        </td>
+        <td>
+            {{i.occupation}}
+        </td>
+        <td>
+            {{i.aadhar}}
+        </td>
+        <td>
+            {{i.pan}}
+        </td>
+
+    </tr>
+    
+    </table>

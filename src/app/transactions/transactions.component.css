@@ -1,0 +1,33 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: #fff;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:60px;
+  background-color: blueviolet;
+
+}
+div a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: 0.5s;
+}
+div a:hover{
+    background-color: rgb(62, 17, 104);
+    border-radius: 30px;
+}

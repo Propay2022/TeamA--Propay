@@ -1,0 +1,75 @@
+/* nav div img{
+    height: 50px;
+    width: 50px;
+}
+nav{
+    background: #460849;
+	box-shadow: 0 3px 15px rgba(0, 0, 0, .4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.logo img{
+    border-radius: 50%;
+    width: 50px;
+    filter:  brightness(0) invert(1);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: rotate;
+    animation-delay: 1s;
+}
+@keyframes rotate{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+nav label{
+    padding-left: 10px;
+    font-size: 20px;
+    color: white;
+}
+nav .menu ul li {
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 20px;
+}
+nav .menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    transition: 0.5s;
+}
+nav .menu ul li a:hover, nav .signin a:hover {
+	color: #fff;
+    transform: scale(1.1);
+    
+}
+
+nav .signin a{
+    padding-right: 10px;
+}
+nav .signin img{
+    width: 50px;
+    height: 50px;
+    padding-top:10px;
+    color: #7625c7;
+
+}
+nav .menu{
+    margin-right: 100px;
+}
+---------------------------------------------------------------------------------------------------------------- */

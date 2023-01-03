@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <h1>Broadband Recharge</h1>
+    
+      <img class="image" src="../assets/Broad-band.svg"/>
+      
+      <form #myForm="ngForm" (ngSubmit)="proceed()">
+        <div class="outerbox">
+          <div class="inputbox">
+            <label>Choose an Operator: </label>
+            <select name="operator" #operator="ngModel" ngModel required [(ngModel)]="ope">
+              <option value="">Select an operator</option>
+              <option value="act">ACT Fibernet</option>
+              <option value="airtel">Airtel Xstream</option>
+              <option value="bsnl">BSNL Landline</option>
+              <option value="cherrinet">Cherrinet Broadband</option>
+              <option value="hathway">Hathway Broadband</option>
+              <option value="jio">JIO Fibernet</option>
+            </select>
+            <br /><br /><br />
+            <label>Enter your number: </label>
+            <input class="numtext" type="text" name="mobile_No" #mobile_No="ngModel" ngModel required pattern="[0-9]+" maxlength="10" minlength="10" [(ngModel)] ="mob"/>
+            <div *ngIf="mobile_No.touched">
+                <div *ngIf="mobile_No.errors?.['required']">
+                    <font color="red"><b>Mobile Number Required.</b></font>
+                </div>
+                <div *ngIf="mobile_No.errors?.['pattern']">
+                    <font color="red"><b>Invalid Mobile Number.</b></font>
+                </div>
+            </div><br><br>
+            <button class="sbtn" type="Submit" [disabled]="myForm.invalid" >Proceed </button>
+  
+          </div>
+        </div>
+      </form>
+  
+
+    
+  </body>
+</html>

@@ -1,0 +1,210 @@
+body{
+    height: 100vh;
+    background-color: #000 ;
+    overflow: hidden;
+}
+
+nav{
+    background-color: #000;
+	color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+   width: 210vh;
+    z-index: 1; 
+    animation-name: slidedown ;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+@keyframes slidedown{
+    from{
+        top:-50px
+    }
+    to{
+        top:0px;
+    }
+}
+nav div img{
+    height: 50px;
+    width: 70px;
+    filter:  brightness(0) invert(1);
+}
+nav .logo {
+    display: flex;
+    padding: 10px;
+    float: right;
+    
+}
+nav label{
+   font-weight: 500;
+   font-size: large;
+    position: relative;
+    top: -15px;
+    color: white;
+    
+}
+.signin{
+    margin-top: 20px;
+}
+.signin a{
+    padding-right: 10px;
+    color: white;
+    margin-right: 100px;
+   font-weight: 500;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 30px;
+    transition: 0.8s;
+}
+.signin a:hover{
+    background-color: #fff;
+    color: #5024c0;
+}
+.logo img{
+    border-radius: 50%;
+    width: 50px;
+    filter:  brightness(0) invert(1);
+   
+}
+.header label{
+color: white;
+font-size:larger;
+font-weight: 800 ;
+letter-spacing: 2px;
+}
+
+.text{
+    position: relative;
+    top: 100px;
+    left: 60px;
+    
+}
+h1 {
+    font-size: 9vmin;
+    color: #a607ac;
+    text-align: left;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    margin: 1rem 0 1rem 2rem;
+  }
+  
+  /* Typewriter effect 1 */
+  @keyframes typing {
+    0.0000%, 92.82% { content: ""; }
+    7.14%, 85.68% { content: "P"; }
+    14.28%, 78.54% { content: "Pr"; }
+    21.42%, 71.4% { content: "Pro "; }
+    28.56%, 64.26% { content: "ProP"; }
+    35.7%, 57.12% { content: "ProPa"; }
+    42.84%, 49.98% { content: "ProPay"; }
+
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .typewriter {
+    --caret: currentcolor;
+  }
+  
+  .typewriter::before {
+    content: "";
+    animation: typing 3s infinite;
+  }
+  
+  .typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  }
+  
+  .typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+  }
+  
+  .typewriter.nocaret::after {
+    border-right: 0;
+  }
+  
+
+
+span{
+    color: #fff;
+}
+.para{
+    color:#fff;
+    font-size: large;
+    font-weight:300;
+    letter-spacing: 2px;
+    position: relative;
+    left:40px;
+}
+
+.loginbtn{
+    position: relative;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    padding: 18px 30px;
+    font-weight: 500;
+    margin-top: 60px;
+    background-color: #460849;
+    border-radius: 50px;
+    left: 20px;
+    transition: 0.6s;
+    animation-name: appear;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.btn:hover{
+    color: #000;
+    background-color: #fff ;
+}
+
+.right{
+    position: relative;
+    float: right;
+    top:-150px;
+    right:150px;
+}
+.lap{
+    width: 500px;
+    height: 400px;
+    animation-name: lastappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+@keyframes lastappear{
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+  /* ---------------------------------------------------------------------------------------------------------------- */

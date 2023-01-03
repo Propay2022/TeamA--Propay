@@ -1,0 +1,26 @@
+<div><app-transactions></app-transactions></div>
+<br>
+
+<table >
+<tr>
+    <th>PROVIDER</th>
+    <th>CUSTOMER NO</th>
+    <th>MOBILE NO</th>
+    <th>AMOUNT</th>
+</tr>
+<tr *ngFor = "let g of lpgArr">
+    <td>
+        {{g.provider}} 
+    </td>
+    <td>
+        {{g.customer_No}}
+    </td>
+    <td>
+        {{g.mobile_No}}
+    </td>
+    <td>
+        {{g.amount}}
+    </td>
+</tr>
+
+</table>

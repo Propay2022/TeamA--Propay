@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  >
+    
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img src="assets\logo.png">
+                <label>ProPay</label>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a routerLink="home" (click) ="toHome()">Home</a></li>
+                    <li><a routerLink="home" href="#aboutus" (click) ="toAboutUs()">About Us</a></li>
+                    <li><a routerLink="home" href="#contactus" (click) ="toContactUs()">Contact us</a></li>
+                    <li><a routerLink="home" href="#feedback" (click) ="toFeedback()">Feedback</a></li>
+                </ul>
+            </div>
+            
+            <div class="signin">
+                <button class="accnt" mat-button [matMenuTriggerFor]="beforeMenu"><img src="assets\account.png"></button>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <button class="dropdwn" mat-menu-item><a routerLink="/profile">PROFILE</a></button>
+                <button class="dropdwn" mat-menu-item><a routerLink="/transactions">TRANSACTIONS</a></button>
+                <button class="dropdwn" mat-menu-item (click)="signout()">SIGNOUT</button>
+                </mat-menu>
+            </div>
+        </nav>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+        
+<div id="home">
+    <div class="Quotes"><i class="bold"><div class="scroller">
+
+        <span>
+            &#x0BF9; <br>
+            &#x20b9;<br>
+            &#8364;<br>
+            &#x24;<br>
+            &#xa3;<br>
+            &#xa5;<br>
+            &#xa2;<br>
+            &#x2191;
+        </span>
+
+      </div></i><span class="Quote">Pay from anywhere <br><br> in the world.Anytime.</span></div>
+            <div class="top">
+                <div class="recharge">
+                    <a routerLink="/mobilepage"><img class="icons" src="assets\mobilerecharge.png"/><br>
+                    <label>Recharge</label></a>
+                </div>
+                <div class="dth">
+                    <a routerLink="/dthpage"><img class="icons" src="assets\dth.png"/><br>
+                    <label>DTH</label></a>
+                </div>
+                <div class="broadband">
+                    <a routerLink="/broadband"><img class="icons" src="assets\broadband.png"/><br>
+                    <label>BroadBand</label></a>
+                </div>
+                <div class="eb">  
+                    <a routerLink="/electricbill"><img class="icons" src="assets\eb.png"/><br>
+                    <label>Electricity</label></a>
+                </div>
+            </div>
+
+            <div class="bottom">                
+                <div class="creditcard">  
+                    <a routerLink="/creditcard"><img class="icons" src="assets\creditcard.png"/><br>
+                    <label>CreditCard</label></a>
+                </div>
+                <div class="lpg">  
+                    <a routerLink="/gas"><img class="icons" src="assets\lpg.png"/><br>
+                    <label>LPG</label></a>
+                </div>
+                <div class="fasttag">  
+                    <a routerLink="/fasttag"><img class="icons" src="assets\fasttag.png"/><br>
+                    <label>FastTag</label></a>
+                </div>
+                <div class="insurance">  
+                    <a routerLink="/insurance"><img class="icons" src="assets\health-insurance.png"/><br>
+                    <label>Insurance</label></a>
+                </div>
+            </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------             -->
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                            <div class="bot">
+                        <img class="weapon" (click)="onclick()" src="../../assets/chatbot.png"/>
+                            </div>
+            
+                        <ng-container *ngIf="visible">
+                            <div class="bg-white shadow-sm p-3">
+                                <div class="chatbot">
+                                    <p class="a-msg">Hii, welcome to propay! How may I help you</p>
+                                    <input class="pre" type="button" value="Payment related query" (click) = "payment()"> <br><br>
+                                    <input class="pre" type="button" value="Contact our executive" (click) = "contact()"> <br><br>
+                                    <input class="pre" type="button" value="Send us a feedback" (click) = "feedback()"> <br><br>
+                                <div class="u-msg">{{msg1}}</div><br><br>
+                                
+                                <div *ngIf = "payment_flag">
+                                    <p class="a-msg">please select any one of the below:</p>
+                                
+                                    <button class="pre" *ngFor = "let bot of paymentArr" (click) = "selectPayment(bot)">{{bot}}</button><br><br>
+                                    <div [ngSwitch] = "payment_msg">
+                                        <font color="black" *ngSwitchCase = "'Transaction failed'" >
+                                            <div class="u-msg">{{msg2}}</div><br><br>
+                                
+                                            <p class="a-msg">If your money is deducted from your bank account for a failed payment, there is no need to worry.  The amount will
+                                                be refunded into your account within 3 to 5 days.
+                                            </p>
+                                            <p class="a-msg">For further assistance, kindly contact our executive</p></font>
+                                        <font color="black" *ngSwitchCase = "'Transaction pending'">
+                                            <div class="u-msg">{{msg3}}</div><br><br>
+                                
+                                            <p class="a-msg">If your payment is pending, we kindly request you to wait for 48hrs for your bank to update the status
+                                                of your pending payment.      
+                                            </p>
+                                            <p class="a-msg">For further assistance, kindly contact our executive</p></font>
+                                        <font color="black" *ngSwitchCase = "'Refund related'">
+                                            <div class="u-msg">{{msg4}}</div><br><br>
+                                
+                                            <p class="a-msg">If your payment is cancelled or has failed, the money will be autoatically refunded to your account.  In case of
+                                                non-refund status of more than 48 hrs kindly contact your respective bank.
+                                            </p>
+                                            <p class="a-msg">For further assistance, kindly contact our executive</p></font>
+                                        <font color="black" *ngSwitchDefault><b></b></font>
+                                    </div>
+                                </div>
+                                <div *ngIf = "contact_flag">
+                                    <p class="a-msg">Due to heavy responses, we couldn't get our pro-executives on call.  We request you to send us an email.  
+                                        Our pro-executive will contact you in the next ten minutes"
+                                    </p>
+                                    <p class="s-msg"><a href="mailto:callback.propay@gmail.com?&subject=Get a call back"> <img class="icon" src="assets\mail.png"> Send mail</a></p>
+                                    
+                                </div>
+                                
+                                <div *ngIf = "feedback_flag">
+                                <p class="a-msg">How was your experience, please share your valuable feedback!!</p>
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" (click) = feedback_msg5()/>
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" (click) = feedback_msg4()/>
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" (click) = feedback_msg3()/>
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" (click) = feedback_msg2()/>
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" (click) = feedback_msg1()/>
+                                    <label for="star1" title="text">1 star</label>
+                                  </div>
+                                </div><br>
+                                <p>{{msg}}</p><br>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+                    </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+        <div id="aboutus">
+            <h1>About us</h1>
+            <p class="us">Our goal is to make digital payments so easy, safe and universally accepted that people never feel the need to carry cash or cards again. 
+                We believe India is at the cusp of a new mobile revolution, which will change the way we manage our money on the go. 
+                </p>
+            <div class="up">
+                
+                <div class="a1">
+                    <div class="a1Front"><img class="aPic" src="assets\brr.jpg"> <br><br> Subhash <br>CEO</div>
+                    <div class="a1Back">Introvert until he becomes comfortable.</div>
+                </div>
+           
+                <div class="a1">
+                    <div class="a1Front"><img class="aPic" src="assets\brr.jpg"><br><br> Gurusaran <br>CEO</div>
+                    <div class="a1Back">Cool dude with a positive attitude.</div>
+                </div>
+    
+                <div class="a1">
+                    <div class="a1Front"><img class="aPic" src="assets\brr.jpg"><br><br> MadanKumar <br>CEO</div>
+                    <div class="a1Back">Mysterious man with hell lot of dreams.</div>
+                </div>
+            </div>
+    
+            <div class="down">
+                <div class="a1">
+                    <div class="a1Front"><img class="aPic" src="assets\brr.jpg"><br><br> Latchumi Raghav <br>CEO</div>
+                    <div class="a1Back">Funny and simple geek, who cheers-up others.</div>
+                </div>
+    
+                <div class="a1">
+                    <div class="a1Front"><img class="aPic" src="assets\brr.jpg"><br><br> Abitha <br>CEO</div>
+                    <div class="a1Back">Lady-founder 1 of ProPay</div>
+                </div>
+                
+                <div class="a1">
+                    <div class="a1Front"><img class="aPic" src="assets\brr.jpg"><br><br> Keerthika <br>CEO</div>
+                    <div class="a1Back">Lady-founder 2 and Scrum-master of Propay </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+        <div id="contactus">
+            <!-- <h1> Contact us</h1> -->
+
+            <div id="left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.3716614444274!2d80.23029831404324!3d12.948053218899737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525daa773c5831%3A0x25050691c47ec353!2sProdapt%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1668313670736!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
+                <div class="location">
+                    <img src="assets\location.png"/><b>REGISTERED ADDRESS</b><br><br>
+                    <b>Prodapt Solutions</b><br>
+                    Prodapt Solutions Pvt. Ltd. “Chennai One” SEZ, Thoraipakkam, Chennai<br><br>
+                </div>
+            </div>
+            <div id="right">
+                <div class="help">
+                    <img class="icon" src="assets\help.png"/> <b>NEED HELP</b><br><br>
+                    Need help with the ProPay app? Send us a message and we'll get back to you at the earliest.<br>
+                    <div class="info-div"><img class="icon" src="assets\mail.png"/>
+                    <a href="mailto:propay.helpdesk@gmail.com?&subject=Propay - query">Send mail</a></div>        
+                </div>
+                <div class="grievance">
+                    <img class="icon" src="assets\grievance.png"/> <b>GRIEVANCES</b><br><br>
+                    Get in touch with us to escalate any existing complaints, and we will ensure a quick resolution.<br>
+                    <div class="info-div"><img class="icon" src="assets\mail.png"/>
+                        <a href="mailto:propay.helpdesk@gmail.com?&subject=Propay - query">Send mail</a></div>
+                </div>
+                <div class="contact">
+                    <img class="icon" src="assets\telephone.png"/> <b>CONTACT US</b><br><br>
+                    +91 44 4903 3000 <br>+91 44 4230 2300
+                </div>
+            </div>
+        </div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+        <div id="feedback">
+            <form action="https://formsubmit.co/propay.helpdesk@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="#">
+                <input type="hidden" name="_subject" value="Hey Propay. Someone Need your Help!">
+                <input type="hidden" name="_template" value="table">
+                <h2>Let's Get In Touch!</h2>
+                <input type="text" name="name"  placeholder="Enter your name"/>
+                <input type="email" name="email"  placeholder="Enter your email id"/>
+                <input type="number" name="phone"  placeholder="Enter your phone no" />
+                <textarea  id="message" name="address" rows="4" placeholder="Write your message here"></textarea>
+                <button class="sub" type="submit" name="submit" value="Send" >Send </button>
+            </form>
+        </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------------     -->
+    </div>
+
+</body>
+</html>

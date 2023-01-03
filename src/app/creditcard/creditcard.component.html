@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Creditcard bill payment</title>
+
+</head>
+<body>
+
+    <h1>CREDIT CARD BILL PAYMENT</h1>
+    <img class="image" src="../assets/Credit-card.svg"/>
+    <form  #myForm="ngForm" (ngSubmit)="insertCredit(myForm.value)">
+        <div class="outerbox">
+            <div class="innerbox">
+                <div class="bill">
+                <label>Choose the Bank: </label> 
+                <select class="elec-option" name="biller" #biller="ngModel" ngModel required [(ngModel)]="bill">
+                    <option value="">select an bank</option>
+                    <option value="SBI">State Bank of India</option>
+                    <option value="BOI">Bank of India</option>
+                    <option value="BOB">Bank of Baroda</option> 
+                    <option value="CB">Canara Bank</option>
+                    <option value="CBI">Central Bank of India</option>
+                    <option value="IB">Indian Bank</option>
+                    <option value="IOB">Indian Overseas Bank</option>
+                    <option value="ICI">ICICI Bank</option>
+                    <option value="HD">HDFC Bank</option>
+                    <option value="KMB">Kotak Mahindra Bank</option>
+                    <option value="AB">Axis Bank</option>
+                    <option value="CUB">City Union Bank</option>
+                    <option value="KVB">Karur Vysya Bank</option>
+                    <option value="SI">South Indian Bank</option>
+                    <option value="IB">Induslnd Bank</option>
+                    <option value="OCB">DCB Bank</option>
+                    <option value="KB">Karnataka Bank</option>
+                    <option value="IO">IDBI bank</option>
+                    <option value="UNO">UCO Bank</option>
+                    <option value="UB">Union Bank of India</option>
+                </select>
+                </div>
+                 <br> <br> 
+                <div class="customer">
+                <label>Credit Card number: </label>
+                <input  class="cnum" type="text" placeholder="Enter credit card number"  name="number" #number="ngModel" ngModel required pattern="[0-9]+" maxlength="16" minlength="16"[(ngModel)]="no" />
+                <div *ngIf="number.touched">
+                    <div *ngIf="number.errors?.['required']">
+                        <font color="red"><b>Creditcard Number Required.</b></font>
+                    </div>
+                    <div *ngIf="number.errors?.['pattern']">
+                        <font color="red"><b>Invalid Creditcard Number.</b></font>
+                    </div>
+                </div>
+               
+               </div>
+               <br> <br> 
+               <div Class="amount"><label>Bill Amount: </label> 
+                   <input class="camo" type="text" placeholder="amount" name="amount" #amount="ngModel" ngModel required pattern="[0-9]+" maxlength="7" minlength="0" [(ngModel)]="plans" />
+                   <div *ngIf="amount.touched">
+                       <div *ngIf="amount.errors?.['required']">
+                           <font color="red"><b>Amount Required.</b></font>
+                       </div>
+                       <div *ngIf="amount.errors?.['pattern']">
+                           <font color="red"><b>Invalid Amount.</b></font>
+                       </div>
+                   </div><br><br>
+                   <button id="button1" class="button">PAYNOW</button>
+                <!-- <button class="button" id="button1" [disabled]="myForm.invalid" type="submit" routerLink="/payment">PayNow</button> -->
+            </div>
+            <br>
+            <!-- <font color="green"><b> {{msg}} </b></font> -->
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
